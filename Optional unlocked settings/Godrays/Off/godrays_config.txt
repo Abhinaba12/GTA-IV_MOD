@@ -1,0 +1,12 @@
+//CryENB V3 CONFIGURATION FILE
+
+// GODRAYS SETTINGS
+//#define GODRAYS //change "//#define" to "#define" to enable, vice versa
+#define GODRAYS_QUALITY 2 //0=low, 1=mid, 2=high, 3=ultra, 4=insane
+float Decay = 0.96;
+float Exposure = 0.5;
+float Weight = 0.22;
+float Density = 0.55;
+float GodRays_Color_R = 0.1;
+float GodRays_Color_G = 0.085;
+float GodRays_Color_B = 0.06;

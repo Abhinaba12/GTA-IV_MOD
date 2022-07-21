@@ -1,0 +1,4 @@
+-nomemrestrict
+-norestrictions
+-novblank
+-shadowquality 3

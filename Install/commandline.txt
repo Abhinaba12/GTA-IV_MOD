@@ -1,0 +1,5 @@
+-nomemrestrict
+-norestrictions
+-novblank
+-shadowquality 3
+-availablevidmem 8117

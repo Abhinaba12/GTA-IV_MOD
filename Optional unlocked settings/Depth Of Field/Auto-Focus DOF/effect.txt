@@ -1,0 +1,45 @@
+//++++++++++++++++++++++++++++++
+// Very simple DOF by icelaglace
+// This is for CryENB only at the moment
+//++++++++++++++++++++++++++++++
+
+// 1.25 is by default, you can increase at your own risk. :)
+float bokehSizeMult = 1.25;
+
+// then all that sh*t is not meant to be tweakable. 
+#define PI 3.1415
+float4 ScreenSize;
+texture2D texColor;
+
+sampler2D SamplerColor = sampler_state
+{
+Texture   = <texColor>;
+MinFilter = LINEAR;
+MagFilter = LINEAR;
+MipFilter = NONE;//NONE;
+AddressU  = Clamp;
+AddressV  = Clamp;
+SRGBTexture=FALSE;
+MaxMipLevel=0;
+MipMapLodBias=0;
+};
+
+struct VS_OUTPUT_POST{float4 vpos:POSITION;float2 txcoord:TEXCOORD0;};struct VS_OUTPUT_DOF{float4 vpos:POSITION;float2 txcoord:TEXCOORD0;float focaldepth:TEXCOORD1;};struct VS_INPUT_POST{float3 pos:POSITION;float2 txcoord:TEXCOORD0;};
+
+VS_OUTPUT_POST D(VS_INPUT_POST t){VS_OUTPUT_POST f;float4 y=float4(t.pos.x,t.pos.y,t.pos.z,1.);f.vpos=y;f.txcoord.xy=t.txcoord.xy;return f;}float t(float y){return 1.f-1.f/y;}float D(){float f=0,y=.05;for(int r=0;r<6;r++){float S=(float)r;S*=PI*2/6;float2 s=float2(cos(S),sin(S));s.y*=ScreenSize.z;s*=y;float z=t(tex2Dlod(SamplerColor,float4(s+float2(.5,.5),0,0)).w);f+=z;}return f/6;}VS_OUTPUT_DOF s(VS_INPUT_POST t){VS_OUTPUT_DOF f;float4 y=float4(t.pos.x,t.pos.y,t.pos.z,1.);f.vpos=y;f.txcoord.xy=t.txcoord.xy;f.focaldepth=D();return f;}float2 D(float r,float z,float S){float f=6.28318*(1./z)*(S+r);return float2(sin(f),cos(f));}float4 fu(VS_OUTPUT_DOF z,float2 f:VPOS):COLOR{float2 y=z.txcoord.xy;float4 S=tex2D(SamplerColor,y);float s=t(S.w),r=z.focaldepth,V=abs(s-r);V=sqrt(V);if(s<r)V/=2;V=min(V,1.);float2 d=1./ScreenSize.x*V;d.y*=ScreenSize.z;float x=2./14.;float2 w=bokehSizeMult*4.*d.xy;float3 a=tex2D(SamplerColor,y+D(x,14.,0.)*w).xyz,c=tex2D(SamplerColor,y+D(x,14.,1.)*w).xyz,I=tex2D(SamplerColor,y+D(x,14.,2.)*w).xyz,h=tex2D(SamplerColor,y+D(x,14.,3.)*w).xyz,o=tex2D(SamplerColor,y+D(x,14.,4.)*w).xyz,l=tex2D(SamplerColor,y+D(x,14.,5.)*w).xyz,e=tex2D(SamplerColor,y+D(x,14.,6.)*w).xyz,p=tex2D(SamplerColor,y+D(x,14.,7.)*w).xyz,C=tex2D(SamplerColor,y+D(x,14.,8.)*w).xyz,m=tex2D(SamplerColor,y+D(x,14.,9.)*w).xyz,T=tex2D(SamplerColor,y+D(x,14.,10.)*w).xyz,O=tex2D(SamplerColor,y+D(x,14.,11.)*w).xyz,P=tex2D(SamplerColor,y+D(x,14.,12.)*w).xyz,n=tex2D(SamplerColor,y+D(x,14.,13.)*w).xyz,U=tex2D(SamplerColor,y).xyz;float i=1./15.;float4 u=0.;u.xyz=a*i+c*i+I*i+h*i+o*i+l*i+e*i+p*i+C*i+m*i+T*i+O*i+P*i+n*i+U*i;float4 F=float4(u.xyz,V);return F;}
+
+technique PostProcess
+{
+   pass P0
+   {
+VertexShader = compile vs_3_0 s();
+PixelShader  = compile ps_3_0 fu();
+
+FogEnable=FALSE;
+ALPHATESTENABLE=FALSE;
+SEPARATEALPHABLENDENABLE=FALSE;
+AlphaBlendEnable=FALSE;
+FogEnable=FALSE;
+SRGBWRITEENABLE=FALSE;
+}
+}

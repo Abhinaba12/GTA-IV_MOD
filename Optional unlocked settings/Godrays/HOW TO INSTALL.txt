@@ -1,0 +1,11 @@
+IMPORTANT: Install this AFTER you've installed the main files!
+_____________________________
+
+If you don't know what Godrays is, let me google it for you: http://goo.gl/86dCRs
+
+I only recommend installing this if you have a good PC.
+
+_____________________________
+
+Installation:
+Copy the godrays_config.txt inside one of the folders to your GTA IV or EFLC main folder.

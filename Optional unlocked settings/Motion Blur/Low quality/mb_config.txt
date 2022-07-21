@@ -1,0 +1,4 @@
+//CryENB V3 CONFIGURATION FILE
+
+// MOTION BLUR SETTINGS
+#define MOTION_BLUR_QUALITY 0 //-1=off, 0=low, 1=mid, 2=high, 3=ultra, 4=insane

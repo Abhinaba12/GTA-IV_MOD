@@ -1,0 +1,10 @@
+Installation:
+Extract all the files and folders to your GTA IV or EFLC main folder -
+
+GTA IV
+Retail: C:/Program Files/Rockstar Games/Grand Theft Auto IV
+Steam: C:/Program Files/Steam/steamapps/common/Grand Theft Auto IV/GTA IV
+
+EFLC
+Retail: C:/Program Files/Rockstar Games/EFLC
+Steam: C:/Program Files/Steam/steamapps/common/Grand Theft Auto IV Episodes from Liberty City\EFLC

@@ -1,0 +1,19 @@
+//CryENB V3 CONFIGURATION FILE
+
+//DEPTH OF FIELD SETTINGS
+//#define SSAA_ENABLE;
+#define DEPTH_OF_FIELD; //change "//#define" to "#define" to enable, vice versa
+#define DEPTH_OF_FIELD_QUALITY 3
+#define POLYGONAL_BOKEH
+#define	POLYGON_NUM 5
+//#define DOF_DISTORTION
+float NearBlurDepth=-150;
+float FocalPlaneDepth=5.5;
+float FarBlurDepth=300;
+float MaxBlurAmount=1;
+float BokehBias=0.25;
+float BokehBiasCurve=1.5;
+float BokehBrightnessThreshold=1.5;
+float BokehBrightnessMultipiler=0;
+float RadiusSacleMultipiler=2.5;
+float DoFDistortionAmount=0.0;

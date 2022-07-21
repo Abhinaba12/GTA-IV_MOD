@@ -1,0 +1,255 @@
+# stores intial values for configuration of in game elements
+#Name	Value
+#Values to use with hieght based reflection map	100 250 0.15 1
+heightReflect.width	100
+heightReflect.height	250
+heightReflect.specularoffset	1
+heightReflect.waterspeed	1
+
+#Values to use with rain collision map 28 600 0.5 1
+raincollision.width	30
+raincollision.height	600
+raincollision.specularoffset	0.6
+raincollision.waterspeed	1
+
+#Values for rain GPU particle effect
+rain.NumberParticles.ps3	32768
+rain.NumberParticles	32768
+rain.UseLitShader	1
+# rain.gravity	0 0 -0.98
+rain.gravity.x	1
+rain.gravity.y	0
+rain.gravity.z	-0.98
+rain.fadeInScale	2
+# diffuse 1 ambient 0.4 0.6 0.4
+rain.diffuse	0.95
+rain.ambient	1
+rain.wrapScale	0.5
+rain.wrapBias	0.5
+# rain.defaultlight	1 1 1 16
+rain.defaultlight.red	0.8
+rain.defaultlight.green	0.8
+rain.defaultlight.blue	0.8
+rain.defaultlight.alpha	16
+
+#Config for static values for skyhat 0.98 1 1 0.68 0.76 1 0 0
+sky.sun.centreStart   0.98
+sky.sun.centreEnd   1
+sky.cloudWarp	1
+sky.cloudInscatteringRange   0.68
+sky.cloudEdgeSmooth	  0.76
+sky.sunAxiasX	1
+sky.sunAxiasY	0
+sky.GameCloudSpeed   0
+
+#config values for vehice settings
+car.headlight.angle	-0.2
+# car.headlight.color	1 0.9 0.8
+car.headlight.color.red	1
+car.headlight.color.green	0.9
+car.headlight.color.blue	0.8
+car.headlight.intensity	2
+car.headlight.falloffMax	11
+car.headlight.innerConeAngle	20
+car.headlight.outerConeAngle	50
+car.headlight.emissive.on	20
+car.headlight.emissive.off	0
+
+# car.taillight.color	1 0 0
+car.taillight.color.red	1
+car.taillight.color.green	0
+car.taillight.color.blue	0
+car.taillight.intensity	1.5
+car.taillight.falloffMax	8
+car.taillight.innerConeAngle	45
+car.taillight.outerConeAngle	90
+car.taillight.emissive.on	5
+car.taillight.emissive.off	0
+
+# car.siren.color	1
+car.siren.color.red	99
+car.siren.color.green	0.2
+car.siren.color.blue	0
+# car.siren.color2	0
+car.siren.color2.red	0
+car.siren.color2.green	1
+car.siren.color2.blue	99
+car.siren.intensity	16
+car.siren.falloffMax	20
+car.siren.innerConeAngle	12
+car.siren.outerConeAngle	92
+
+# car.taxi.color	1
+car.taxi.color.red	1
+car.taxi.color.green	1
+car.taxi.color.blue	0.6
+car.taxi.intensity	1
+car.taxi.falloffMax	0.8
+car.taxi.innerConeAngle	0.5
+car.taxi.outerConeAngle	1
+
+car.indicator.intensity	0.5
+# car.indicator.color	1
+car.indicator.color.red	1
+car.indicator.color.green	0.5
+car.indicator.color.blue	0
+car.indicator.falloffMax	4.5
+car.indicator.innerConeAngle	30
+car.indicator.outerConeAngle	80
+car.indicator.emissive.on	25
+car.indicator.emissive.off	0
+
+# Other emissive lights
+car.defaultlight.emissive.on	11
+car.defaultlight.emissive.off	0
+car.brakelight.emissive.on	25
+car.brakelight.emissive.off	0
+car.middlebrakelight.emissive.on	25
+car.middlebrakelight.emissive.off	0
+car.reversinglight.emissive.on	25
+car.reversinglight.emissive.off	0
+car.extralight.emissive.on	10
+car.extralight.emissive.off	0
+
+# Lod distances for vehicles  100  100
+car.lod.distance.high 100
+car.lod.distance.low 100
+
+#Config values for traffic lights
+# trafficLight.red.color	1
+trafficLight.red.color.red	1
+trafficLight.red.color.green	0.1
+trafficLight.red.color.blue	0
+# trafficLight.amber.color	1
+trafficLight.amber.color.red	1
+trafficLight.amber.color.green	0.5
+trafficLight.amber.color.blue	0
+# trafficLight.green.color	0.1
+trafficLight.green.color.red	0.1
+trafficLight.green.color.green	0.4
+trafficLight.green.color.blue	0.1
+trafficLight.intensity	2
+trafficLight.falloffMax	16
+trafficLight.innerConeAngle	25
+trafficLight.outerConeAngle	90
+
+#Config values for Tree Imposters
+imposter.color.blendRange	1
+imposter.color.blendBias	1
+imposter.color.size1	128
+imposter.color.amt1	12
+imposter.color.size2	64
+imposter.color.amt2	12
+# imposter.backgroundColor	0.2	0.2	0.1
+imposter.backgroundColor.red	0.2
+imposter.backgroundColor.green	0.2
+imposter.backgroundColor.blue	0.2
+imposter.shadow.blendRange	24
+imposter.shadow.blendBias	128
+imposter.shadow.size1	256
+imposter.shadow.amt1	128
+imposter.shadow.size2	128
+imposter.shadow.amt2	64
+
+#Config values for peds	
+ped.ambientvolume.maxstrength	1
+ped.ambientvolume.fadestart	16
+ped.ambientvolume.fadeend	20
+
+# Lod distances for peds
+ped.lod.distance.high	100
+pedincar.lod.distance.high	100
+
+#Config Values for Camera Events	Val start
+
+cam.followped.blur.zoom.x	0.01
+cam.followped.blur.zoom.y	0.1
+cam.followped.blur.zoom.z	0.01
+cam.followped.blur.zoom.w	0.02
+
+cam.followped.blur.damage.x	0.01
+cam.followped.blur.damage.y	10
+cam.followped.blur.damage.z	0.01
+cam.followped.blur.damage.w	0.025
+
+cam.followped.blur.falling.x	3
+cam.followped.blur.falling.y	10
+cam.followped.blur.falling.z	0.02
+cam.followped.blur.falling.w	0.1
+
+cam.followped.blur.beta.x	0.03
+cam.followped.blur.beta.y	0.03
+cam.followped.blur.beta.z	0.01
+cam.followped.blur.beta.w	0.01
+cam.followped.blur.damage.time	500
+cam.followped.blur.damage.attacktime	0.1
+cam.followped.blur.damage.decaytime	0.3
+cam.followped.blur.cap	0.3
+
+cam.aimweapon.blur.zoom.x	0
+cam.aimweapon.blur.zoom.y	0.1
+cam.aimweapon.blur.zoom.z	0.03
+cam.aimweapon.blur.zoom.w	0.1
+
+cam.aimweapon.blur.damage.x	0
+cam.aimweapon.blur.damage.y	10
+cam.aimweapon.blur.damage.z	0.03
+cam.aimweapon.blur.damage.w	0.1
+cam.aimweapon.blur.damage.time	1000
+cam.aimweapon.blur.interp	0.05
+cam.aimweapon.blur.damage.attacktime	0.1
+cam.aimweapon.blur.damage.decaytime	0.3
+cam.aimweapon.blur.cap	1
+
+cam.followvehicle.blur.zoom.x	0
+cam.followvehicle.blur.zoom.y	0.1
+cam.followvehicle.blur.zoom.z	0.03
+cam.followvehicle.blur.zoom.w	0.03
+
+cam.followvehicle.blur.speed.x	25
+cam.followvehicle.blur.speed.y	50
+cam.followvehicle.blur.speed.z	0.02
+cam.followvehicle.blur.speed.w	0.05
+
+cam.followvehicle.blur.damage.x	50
+cam.followvehicle.blur.damage.y	100
+cam.followvehicle.blur.damage.z	0.05
+cam.followvehicle.blur.damage.w	0.03
+cam.followvehicle.blur.damage.time	0
+cam.followvehicle.blur.cap	0.3
+cam.game.blur.wasted	0.1
+cam.game.blur.wasted.fadetime	1000
+cam.game.blur.busted	0.1
+cam.game.blur.busted.fadetime	1000
+cam.game.blur.cap	1
+cam.fpsweapon.blur	0.001
+cam.fpsweapon.sniperinitime	300
+cam.fpsweapon.blur.cap	1
+cam.intermezzo.stuntjump.blur	0.02
+
+# Misc Values	
+misc.DOFBlurMultiplier.HD	1
+misc.DOFBlurMultiplier.SD	0.5
+misc.Multiplier.heightStart	100
+misc.Multiplier.heightEnd	250
+misc.Multiplier.farClipMultiplier	2
+misc.Multiplier.nearFogMultiplier	0.5
+misc.3dMarkers.FrontLightIntensity	10
+misc.3dMarkers.frontLightExponent	32
+misc.coronas.WaterMultiplier	10
+misc.BloomIntensityClamp.HD	10
+misc.BloomIntensityClamp.SD	10
+misc.BloomIntensityClamp.SD.ps3	10
+misc.CrossPMultiplier.RimLight	1.0
+misc.CrossPMultiplier.GlobalEnvironmentReflection	1
+misc.CrossPMultiplier.Gamma	1.15
+misc.CrossPMultiplier.MidBlur	1
+misc.CrossPMultiplier.Farblur	1
+misc.CrossPMultiplier.SkyMultiplier	1.05
+misc.CrossPMultiplier.Desaturation 	1.29
+misc.HiDof.nearBlur	0.1
+misc.HiDof.midBlur	0.1
+misc.HiDof.farBlur	1
+misc.cutscene.nearBlurMin	0.1
+misc.HiDof.nearBlur	0.1
+misc.HiDof.midBlur	0.1
